@@ -1,0 +1,289 @@
+/* icon font */
+@font-face {
+  font-family: 'iconFont';
+  src:  url('fonts/iconFont.eot?v8o0c8');
+  src:  url('fonts/iconFont.eot?v8o0c8#iefix') format('embedded-opentype'),
+    url('fonts/iconFont.ttf?v8o0c8') format('truetype'),
+    url('fonts/iconFont.woff?v8o0c8') format('woff'),
+    url('fonts/iconFont.svg?v8o0c8#iconFont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iconFont' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*special styles*/ 
+header{
+	width:100%;
+	height:6em;
+	background-color:#fff;
+	text-align:center;
+}
+footer{
+	background-color: grey;
+    text-align: center;
+    padding: 4em;
+    font-size: 2em;
+}
+
+#vehicleHeading{
+	border-top:1px solid #969696;
+	padding-top: 2em;
+    padding-bottom: 3em;
+}
+
+#vehicleHeading img{
+	max-height: 100%;
+	max-width:100%;
+	padding: 0;
+}
+
+#detailsForm{
+	padding:0;
+	margin-bottom:6rem;
+}
+
+#keySpecs{
+	text-align: center;
+}
+
+#keySpecs li{
+	list-style: none;
+    text-align: center;
+	display: inline-block;
+	margin: 0 1.2rem 0 1.2rem;
+}
+
+#keySpecs h1{
+	font-family:iconFont;
+	font-size: 70px;
+}
+
+#weightCapacities .row {
+	border-top:1px solid #969696;    
+	padding-top: 1em;
+}
+
+#weightCapacities .table{	
+	margin-bottom:1em;
+}
+
+/*bullet styles */
+
+.keyBullets{
+	list-style:none;
+}
+
+.keyBullets li{
+	margin-left: 2em;
+    position: relative;
+}
+
+.keyBullets li:before{
+	font-family: iconFont;
+    content: "\ea10";
+    position: absolute;
+    left: -2em;
+    float: left;
+}
+
+/*form styles */
+#detailsForm input, #detailsForm h4{
+	padding:0 0.6em 0 1.2em;
+}
+
+#detailsForm .column{
+	border-top:1px solid #969696;
+	margin:0;
+}
+
+#detailsForm .left.column{
+	width:60%;
+	border-right:1px solid #969696;
+}
+#detailsForm .right.column{
+	width:40%;
+}
+
+#detailsForm button{
+	float:right;
+	margin:1rem;
+}
+
+input[name="fullname"], 
+input[name="telephone"], 
+input[name="email"],
+textarea[name="requirements"]{
+	width:100%;
+}
+input[name="building"],input[name="postcode"]{
+	width:50%;
+}
+input[name="postcode"]{
+	border-left:1px solid #969696;
+}
+textarea[name="requirements"]{
+	border:none;
+	border-bottom:1px solid #969696;
+	height:100%;
+	resize:none;
+}
+
+#detailsForm input{
+	margin:0;
+}
+
+/* responsive Css table styles */
+.table{
+	display:table;
+	width:100%;
+}
+.table > div{
+	display: inline-table;
+    width: 100%;
+    margin-right: 2.9%;
+	margin-bottom: 0.5em;
+}
+
+.table.fullwidth > div{
+	width:97%
+}
+
+.table p{
+	display: inline-block;
+    width: 100%;
+    text-align: center;
+	margin:0;
+	
+}
+
+.table > div p:last-child{
+	font-weight:600;
+	vertical-align: bottom;
+}
+
+@media (min-width: 600px){
+	.table > div{
+		width: 47%;
+	}
+	.table p{
+		display:table-cell;
+		width:auto;
+	}
+	.table > div p:first-child{
+		text-align:left;
+	}
+	.table > div p:last-child{
+		text-align:right;
+	}
+}
+
+/* image slider styles */
+.imageSlider{
+	overflow:hidden;
+	transition:
+}
+
+.imageSlider ul{
+	position:relative;
+	white-space: nowrap;
+	margin: 0;
+	border-bottom: 1px solid #969696;
+	transition:left 0.5s cubic-bezier(0.37, 0, 0, 0.99);
+}
+.imageSlider li{
+	list-style:none;
+	display:inline-block;
+	height:100%;
+	margin: 0;
+	position: relative;
+}
+.imageSlider img{
+	margin:0 auto;
+	max-height:100%;
+	width:100%;
+	display:block;
+}
+
+.imageSlider .selectors{
+	padding: 0;
+    border-bottom:none;
+}
+
+.imageSlider .selectors li{
+	width: 10rem;
+    margin: 1rem 0.4rem 0 0.4rem;
+    min-height: 8rem;
+    border-radius: 1rem;
+    border: 1px solid #969696;
+	overflow: hidden;
+	
+}
+.imageSlider .selectors li:first-child{
+	margin-left:0.8rem;
+}
+
+.imageSlider .selectors div{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;    
+    opacity: 0.6;
+}
+
+.imageSlider .selectors li:hover div{
+	background-color:#fff;
+	cursor: pointer;
+}
+
+.imageSlider .selectors li.selected{
+	border-color:#21c064;
+}
+
+/* asthetic styles */
+.roundedBox{
+	border: 1px solid #969696;
+    border-radius: 0.6em;
+	margin-bottom: 3rem;
+}
+.roundedBox > *{
+	padding:1.2em;
+}
+
+.darkBg{
+	background:#f8f8f8;
+}
+
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
